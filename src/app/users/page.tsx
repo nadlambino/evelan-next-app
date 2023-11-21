@@ -3,6 +3,12 @@ import ShowMoreButton from '@/components/LoadMoreButton';
 import User from '@/components/User';
 import { fetchUsers } from '@/hooks/user';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Evelan | Users',
+    description: 'List of active online users.',
+}
 
 async function page() {
     const { data: users, total_pages } = await fetchUsers(1);

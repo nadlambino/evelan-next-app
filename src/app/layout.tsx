@@ -3,7 +3,7 @@ import '@/app/styles/globals.css';
 import '@/app/styles/users.scss';
 
 export const metadata: Metadata = {
-    title: 'Evelan App',
+    title: 'Evelan | Ronald Lambino',
     description: 'For Evelan.',
 }
 
