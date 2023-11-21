@@ -14,7 +14,7 @@
     }
 
     .users-list {
-        @apply flex flex-col h-[calc(100vh-120px)] pr-2 overflow-y-scroll;
+        @apply flex flex-col h-[calc(100vh-120px)] pr-2 overflow-y-scroll scroll-smooth;
 
         .user-container {
             @apply flex gap-3 items-center px-2 py-2 border-b border-gray-200 cursor-pointer hover:bg-gray-50;
@@ -33,6 +33,26 @@
 
             .email {
                 @apply text-gray-400 tracking-wide italic;
+            }
+        }
+
+        .user-container__skeleton {
+            @apply w-full animate-pulse flex gap-3 items-center px-2 py-2 border-b border-gray-200 cursor-wait;
+            
+            .id {
+                @apply h-4 w-5 bg-gray-200;
+            }
+
+            .avatar {
+                @apply border-[3px] border-solid border-gray-300 bg-gray-200 p-1 rounded-full w-[50px] h-[50px];
+            }
+
+            .name {
+                @apply m-0 w-32 h-5 bg-gray-200 mb-2;
+            }
+
+            .email {
+                @apply m-0 block w-40 h-3 bg-gray-200;
             }
         }
     }

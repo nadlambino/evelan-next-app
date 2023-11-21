@@ -18,20 +18,24 @@ type HookProps = {
 function useUserApi({ initialPage, hasNextPage }: HookProps) {
     const [page, setPage] = React.useState(initialPage ?? 1);
     const [hasNext, setHasNext] = React.useState(hasNextPage ?? true);
-    const {add: handleAddUsers} = useUserStore();
+    const {append: handleAppendUsers, setLoadingLoadingUsers} = useUserStore();
 
     const nextPage = async () => {
         if (hasNext === false) return;
 
         const nextPage = page + 1;
+        
         setPage(nextPage);
+        setLoadingLoadingUsers(true);
+
         const { data: users, total_pages } = await fetchUsers(nextPage);
 
         setHasNext(nextPage < total_pages);
+        setLoadingLoadingUsers(false);
 
         if (!users) return;
 
-        handleAddUsers(users);
+        handleAppendUsers(users);
     }
 
     return {

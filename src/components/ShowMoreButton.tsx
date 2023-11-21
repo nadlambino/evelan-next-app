@@ -1,7 +1,5 @@
 'use client';
-
 import useUserApi from '@/hooks/user';
-import React from 'react';
 
 function ShowMoreButton({ hasNextPage }: { hasNextPage: boolean }) {
     const { nextPage, hasNext } = useUserApi({ hasNextPage });

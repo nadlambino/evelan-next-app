@@ -3,10 +3,14 @@ import { create } from 'zustand'
 
 type UserStore = {
     users: User[],
-    add: (users: User[]) => void,
+    append: (users: User[]) => void,
+    isLoadingUsers: boolean,
+    setLoadingLoadingUsers: (loading: boolean) => void
 }
 
 export const useUserStore = create<UserStore>((set) => ({
     users: [],
-    add: (users: User[]) => set((state) => ({ users: [...state.users, ...users] })),
+    append: (users: User[]) => set((state) => ({ users: [...state.users, ...users] })),
+    isLoadingUsers: false,
+    setLoadingLoadingUsers: (loading: boolean) => set(() => ({ isLoadingUsers: loading }))
 }));

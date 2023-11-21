@@ -2,7 +2,6 @@ import NextUsers from '@/components/NextUsers';
 import ShowMoreButton from '@/components/ShowMoreButton';
 import User from '@/components/User';
 import { fetchUsers } from '@/hooks/user';
-import React from 'react';
 
 async function page() {
     const { data: users, total_pages } = await fetchUsers(1);
@@ -13,7 +12,7 @@ async function page() {
                 <h1>Active online</h1>
                 { total_pages > 1 && <ShowMoreButton hasNextPage={total_pages > 1} /> }
             </div>
-            <div className='users-list'>
+            <div className='users-list' id='users-list'>
                 { users.map(user => <User user={user} key={user.id} />) }
                 <NextUsers />
             </div>
