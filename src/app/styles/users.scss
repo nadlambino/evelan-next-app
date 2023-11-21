@@ -1,22 +1,30 @@
 .users-page {
     @apply max-w-md m-auto bg-white shadow-md p-5 h-full rounded-md relative;
 
-    h1 {
-        @apply uppercase text-xs tracking-widest font-extrabold text-gray-400;
+    .header {
+        @apply flex justify-between items-center mb-5;
+
+        h1 {
+            @apply uppercase text-xs tracking-widest font-extrabold text-gray-400;
+        }
+
+        .show-more-btn {
+            @apply bg-transparent text-green-600 uppercase rounded-md text-xs font-bold tracking-wider;
+        }
     }
 
     .users-list {
-        @apply flex flex-col h-[calc(100vh-150px)] pr-2 overflow-y-scroll;
+        @apply flex flex-col h-[calc(100vh-120px)] pr-2 overflow-y-scroll;
 
         .user-container {
             @apply flex gap-3 items-center px-2 py-2 border-b border-gray-200 cursor-pointer hover:bg-gray-50;
 
             .id {
-                @apply font-extrabold text-gray-400 text-xs;
+                @apply font-extrabold text-gray-400 text-xs text-right w-5;
             }
 
             .avatar {
-                @apply border-[3px] border-solid border-green-600 p-1 rounded-full;
+                @apply border-[3px] border-solid border-green-600 p-1 rounded-full w-[50px] h-[50px];
             }
 
             .name {
@@ -26,15 +34,6 @@
             .email {
                 @apply text-gray-400 tracking-wide italic;
             }
-        }
-    }
-
-    .btn-container {
-        @apply flex justify-center;
-
-        .show-more-btn {
-            @apply bg-transparent text-green-600 uppercase px-3 py-2 rounded-md text-xs font-bold tracking-wider absolute bottom-3
-            border-[3px] border-solid border-green-600/90;
         }
     }
 }

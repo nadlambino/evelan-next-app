@@ -9,12 +9,14 @@ async function page() {
 
     return (
         <div className='users-page'>
-            <h1 className='mb-4'>Active online</h1>
+            <div className="header">
+                <h1>Active online</h1>
+                { total_pages > 1 && <ShowMoreButton hasNextPage={total_pages > 1} /> }
+            </div>
             <div className='users-list'>
                 { users.map(user => <User user={user} key={user.id} />) }
                 <NextUsers />
             </div>
-            { total_pages > 1 && <ShowMoreButton hasNextPage={total_pages > 1} /> }
         </div>
     )
 }
