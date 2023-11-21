@@ -1,5 +1,6 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from 'next';
+import '@/app/styles/globals.css';
+import '@/app/styles/users.scss';
 
 
 export const metadata: Metadata = {
