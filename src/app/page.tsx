@@ -8,7 +8,7 @@ export default function Home() {
             <p>The goal is to show a list of users on initial page load.</p>
             <p>There should be a button to retrieve more users that will append on the users list.</p>
             <p className="my-3">I made it look like a list of active online users just to make it interesting.</p>
-            <p>Go to <Link href='/users'>/users</Link> to see the output.</p>
+            <p>Go to <Link href='/users' className="font-bold">/users</Link> to see the output.</p>
         </main>
     )
 }
