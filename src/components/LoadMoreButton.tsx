@@ -6,8 +6,8 @@ function ShowMoreButton({ hasNextPage }: { hasNextPage: boolean }) {
 
     return (
         <>{hasNext && (
-            <button type='button' className='show-more-btn' onClick={nextPage}>
-                SHOW MORE
+            <button type='button' className='load-more-btn' onClick={nextPage}>
+                LOAD MORE
             </button>
         )}</>
     )

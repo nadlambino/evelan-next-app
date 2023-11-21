@@ -1,5 +1,5 @@
 import NextUsers from '@/components/NextUsers';
-import ShowMoreButton from '@/components/ShowMoreButton';
+import ShowMoreButton from '@/components/LoadMoreButton';
 import User from '@/components/User';
 import { fetchUsers } from '@/hooks/user';
 
