@@ -19,7 +19,7 @@ body {
 }
 
 .main {
-    @apply flex flex-col h-screen justify-center m-auto max-w-md;
+    @apply p-5 flex flex-col h-screen justify-center m-auto max-w-md;
 
 }
 
