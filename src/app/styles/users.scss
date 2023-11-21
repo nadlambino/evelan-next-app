@@ -14,7 +14,7 @@
     }
 
     .users-list {
-        @apply flex flex-col h-[calc(100vh-120px)] pr-2 overflow-y-scroll scroll-smooth;
+        @apply flex flex-col h-[calc(100vh-70px)] md:h-[calc(100vh-120px)] pr-2 overflow-y-scroll scroll-smooth;
 
         .user-container {
             @apply flex gap-3 items-center px-2 py-2 border-b border-gray-200 cursor-pointer hover:bg-gray-50;
