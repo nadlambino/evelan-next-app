@@ -21,15 +21,16 @@ body {
 .main {
     @apply flex flex-col h-screen justify-center m-auto max-w-md;
 
-    h1 {
-        @apply font-bold text-4xl text-gray-700 mb-5;
-    }
+}
 
-    p {
-        @apply text-gray-600;
+.main h1 {
+    @apply font-bold text-4xl text-gray-700 mb-5;
+}
 
-        a {
-            @apply text-blue-500;
-        }
+.main p {
+    @apply text-gray-600;
+
+    a {
+        @apply text-blue-500;
     }
 }
