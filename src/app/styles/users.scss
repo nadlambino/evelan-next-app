@@ -9,7 +9,8 @@
         }
 
         .load-more-btn {
-            @apply bg-transparent text-green-600 uppercase rounded-md text-xs font-bold tracking-wider;
+            @apply bg-transparent text-green-600 uppercase rounded-md text-xs font-bold tracking-wider disabled:cursor-not-allowed
+            disabled:text-green-600/50;
         }
     }
 

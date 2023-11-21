@@ -10,7 +10,7 @@ async function page() {
         <div className='users-page'>
             <div className="header">
                 <h1>Active online</h1>
-                { total_pages > 1 && <ShowMoreButton hasNextPage={total_pages > 1} /> }
+                <ShowMoreButton hasNextPage={total_pages > 1} />
             </div>
             <div className='users-list' id='users-list'>
                 { users.map(user => <User user={user} key={user.id} />) }
