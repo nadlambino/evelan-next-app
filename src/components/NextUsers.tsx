@@ -6,10 +6,10 @@ import UserSkeleton from '@/components/UserSkeleton'
 
 function NextUsers() {
     const { users, isLoadingUsers } = useUserStore();
-    const container = document.getElementById('users-list');
-    const scrollAmount = 350;
 
     useEffect(() => {
+        const container = document.getElementById('users-list');
+        const scrollAmount = 350;
         if (container && isLoadingUsers === false) {
             container.scrollTop += scrollAmount;
         }
