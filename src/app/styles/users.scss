@@ -1,8 +1,8 @@
 .users-page {
-    @apply max-w-md m-auto bg-white shadow-md p-5 h-full rounded-md relative;
+    @apply max-w-md m-auto bg-white shadow-md p-0 h-full rounded-md relative;
 
     .header {
-        @apply flex justify-between items-center mb-5;
+        @apply flex justify-between items-center p-5 shadow-sm;
 
         h1 {
             @apply uppercase text-xs tracking-widest font-extrabold text-gray-400;
